@@ -1,0 +1,52 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+  }
+  
+  .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to left, rgb(82, 177, 177), rgb(148, 75, 233));
+      overflow: hidden;
+  }
+  
+  .rectangle {
+      position: absolute;
+      width: 90px;
+      height: 160px;
+      background: linear-gradient(to right,white,pink);
+      transform: rotate(360deg);
+      box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .rectangle::before {
+      content: '';
+      position: absolute;
+      top: 0%;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      background: linear-gradient(to right,white,pink);
+      border-radius: none;
+      box-shadow: 0 -20px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rectangle::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 50%;
+      height: 90%;
+      background: linear-gradient(to right,white,pink);
+      border-radius: none;
+      box-shadow: -20px 0 20px rgba(0, 0, 0, 0.1);
+  }
